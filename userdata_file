@@ -1,0 +1,3 @@
+#!/bin/bash
+yum isntall httpd -y
+yum install telnet -y
