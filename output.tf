@@ -24,5 +24,5 @@ output "wordpress" {
 
 
 output "IPs" {
-    value = aws_instance.web.*.public.ip
+    value = aws_instance.web.*.public_ip
 }
