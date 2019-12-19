@@ -8,7 +8,7 @@ output "sec_group" {
 
 
 output "key_name" {
-    value = aws_key_pair.deployer.name
+    value = aws_key_pair.deployer.key_name
 }
 
 output "wordpress_username" {
