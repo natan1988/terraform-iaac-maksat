@@ -2,7 +2,7 @@ output "bucket_name" {
     value = aws_s3_bucket.b.bucket
 }
 
-output "sec_group" {
+output "secs_group" {
     value = aws_security_group.allow.SSH.name
 }
 
