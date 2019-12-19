@@ -3,7 +3,7 @@ output "bucket_name" {
 }
 
 output "sec_group" {
-    value = aws_security_group.allow.SSH.name
+    value = aws_security_group.allow_SSH.name
 }
 
 
