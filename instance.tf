@@ -7,6 +7,6 @@ resource "aws_instance" "web" {
   security_groups = ["allow_SSH"] 
  user_data = file("userdata_file") 
 tags = { 
-    Name = "HelloWorld" 
+    Name = "HelloWorld".count.index 
   } 
 } 
