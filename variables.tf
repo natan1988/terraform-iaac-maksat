@@ -3,3 +3,6 @@ variable "instance_type" {}
   
 variable "count_instance" {}
 
+variable "associate_public_ip_address" {}
+
+
