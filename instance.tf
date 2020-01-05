@@ -1,5 +1,5 @@
 resource "aws_instance" "web" { 
-  ami           = "ami-00068cd7555f543d5" 
+  ami           = var.ami 
   count = 10
   instance_type = "t2.micro" 
   associate_public_ip_address = "true" 
