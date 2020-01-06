@@ -5,7 +5,20 @@ resource "aws_instance" "web" {
   associate_public_ip_address = var.associate_public_ip_address
   key_name= aws_key_pair.deployer.key_name
   security_groups = ["allow_SSH"] 
- user_data = file("userdata_file") 
+ 
+   provisioner "remote-exec" { 
+    connection { 
+      host        = "${self.public_ip}" 
+      type        = "ssh" 
+      user        = var.user
+      private_key = file(var.ssh_key_location) 
+    } 
+    inline = [ 
+      "sudo yum install -y epel-release", 
+      "sudo yum install httpd -y",
+      "systemctl start httpd",
+    ] 
+  } 
 tags = { 
     Name = "HelloWorld${count.index +1}" 
   } 
