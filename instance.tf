@@ -19,7 +19,7 @@ resource "aws_instance" "web" {
         "sudo yum install httpd -y",
         "sudo systemctl start httpd",
         ] 
-        } 
+       } 
 tags = { 
     Name = "HelloWorld${count.index +1}" 
   } 
