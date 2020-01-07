@@ -1,5 +1,3 @@
 variable "name" {}
-variable "cidr" {
-  
-}
+variable "cidr" {}
 
