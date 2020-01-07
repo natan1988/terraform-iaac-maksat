@@ -3,6 +3,6 @@ provider "aws"{
 }
 
 module "bucket1" {
-  source = "./module"
+  source = "./modules"
   bucketname = "maksat1234567"
 }
