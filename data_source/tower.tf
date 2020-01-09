@@ -40,7 +40,7 @@ resource "aws_instance" "tower" {
          type = "ssh"
          user = "centos"
          private_key = file("~/.ssh/id.rsa")
-       }
+    }
     inline = [
         "sudo yum install -y epel-release",  
     ]
