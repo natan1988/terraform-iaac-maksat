@@ -1,4 +1,4 @@
-module "wordpress1" {
+module "vpc1" {
   source = "terraform-aws-modules/vpc/aws"
 
   name = var.name
