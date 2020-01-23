@@ -5,10 +5,16 @@ resource "aws_iam_user" "user" {
 resource "aws_iam_policy" "policy" {
   name        = "test-policy"
   description = "A test policy"
-  policy      = " "Effect": "Allow",
+  policy      = "{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
             "Action": "s3:*",
             "Resource": "*"
-  "              # insert policy here
+        }
+    ]
+}"              # insert policy here
 }
 
 resource "aws_iam_user_policy_attachment" "test-attach" {
