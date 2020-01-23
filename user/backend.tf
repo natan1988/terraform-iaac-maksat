@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "backend-state-maksat"
+    bucket = "test-maksat-for-ansibletower-euwest1"
     key    = "users/user.tfstate"
     region = "us-east-1"
   }
